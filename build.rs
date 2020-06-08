@@ -1,8 +1,8 @@
 extern crate bindgen;
 
+use std::collections::HashSet;
 use std::env;
 use std::path::PathBuf;
-use std::collections::HashSet;
 
 fn main() {
     // Tell cargo to tell rustc to link the pari
@@ -23,8 +23,8 @@ fn main() {
             "FP_ZERO".into(),
             "IPPORT_RESERVED".into(),
         ]
-            .into_iter()
-            .collect(),
+        .into_iter()
+        .collect(),
     );
 
     // The bindgen::Builder is the main entry point
